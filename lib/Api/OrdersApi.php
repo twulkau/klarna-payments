@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Klarna
+ * @package  Klarna\Payments
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Klarna\Api;
+namespace Klarna\Payments\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Klarna\ApiException;
-use Klarna\Configuration;
-use Klarna\HeaderSelector;
-use Klarna\ObjectSerializer;
+use Klarna\Payments\ApiException;
+use Klarna\Payments\Configuration;
+use Klarna\Payments\HeaderSelector;
+use Klarna\Payments\ObjectSerializer;
 
 /**
  * OrdersApi Class Doc Comment
  *
  * @category Class
- * @package  Klarna
+ * @package  Klarna\Payments
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,7 +94,7 @@ class OrdersApi
      *
      * @param  string $authorization_token authorization_token (required)
      *
-     * @throws \Klarna\ApiException on non-2xx response
+     * @throws \Klarna\Payments\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -110,7 +110,7 @@ class OrdersApi
      *
      * @param  string $authorization_token (required)
      *
-     * @throws \Klarna\ApiException on non-2xx response
+     * @throws \Klarna\Payments\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -325,11 +325,11 @@ class OrdersApi
      * Create a new order
      *
      * @param  string $authorization_token authorization_token (required)
-     * @param  \Klarna\Model\CreateOrderRequest $body body (optional)
+     * @param  \Klarna\Payments\Model\CreateOrderRequest $body body (optional)
      *
-     * @throws \Klarna\ApiException on non-2xx response
+     * @throws \Klarna\Payments\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Klarna\Model\Order
+     * @return \Klarna\Payments\Model\Order
      */
     public function createOrder($authorization_token, $body = null)
     {
@@ -343,15 +343,15 @@ class OrdersApi
      * Create a new order
      *
      * @param  string $authorization_token (required)
-     * @param  \Klarna\Model\CreateOrderRequest $body (optional)
+     * @param  \Klarna\Payments\Model\CreateOrderRequest $body (optional)
      *
-     * @throws \Klarna\ApiException on non-2xx response
+     * @throws \Klarna\Payments\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Klarna\Model\Order, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Klarna\Payments\Model\Order, HTTP status code, HTTP response headers (array of strings)
      */
     public function createOrderWithHttpInfo($authorization_token, $body = null)
     {
-        $returnType = '\Klarna\Model\Order';
+        $returnType = '\Klarna\Payments\Model\Order';
         $request = $this->createOrderRequest($authorization_token, $body);
 
         try {
@@ -403,7 +403,7 @@ class OrdersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Klarna\Model\Order',
+                        '\Klarna\Payments\Model\Order',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -419,7 +419,7 @@ class OrdersApi
      * Create a new order
      *
      * @param  string $authorization_token (required)
-     * @param  \Klarna\Model\CreateOrderRequest $body (optional)
+     * @param  \Klarna\Payments\Model\CreateOrderRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -440,14 +440,14 @@ class OrdersApi
      * Create a new order
      *
      * @param  string $authorization_token (required)
-     * @param  \Klarna\Model\CreateOrderRequest $body (optional)
+     * @param  \Klarna\Payments\Model\CreateOrderRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createOrderAsyncWithHttpInfo($authorization_token, $body = null)
     {
-        $returnType = '\Klarna\Model\Order';
+        $returnType = '\Klarna\Payments\Model\Order';
         $request = $this->createOrderRequest($authorization_token, $body);
 
         return $this->client
@@ -491,7 +491,7 @@ class OrdersApi
      * Create request for operation 'createOrder'
      *
      * @param  string $authorization_token (required)
-     * @param  \Klarna\Model\CreateOrderRequest $body (optional)
+     * @param  \Klarna\Payments\Model\CreateOrderRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -602,11 +602,11 @@ class OrdersApi
      * Generate a consumer token
      *
      * @param  string $authorization_token authorization_token (required)
-     * @param  \Klarna\Model\CustomerTokenCreationRequest $body body (optional)
+     * @param  \Klarna\Payments\Model\CustomerTokenCreationRequest $body body (optional)
      *
-     * @throws \Klarna\ApiException on non-2xx response
+     * @throws \Klarna\Payments\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Klarna\Model\CustomerTokenCreationResponse
+     * @return \Klarna\Payments\Model\CustomerTokenCreationResponse
      */
     public function purchaseToken($authorization_token, $body = null)
     {
@@ -620,15 +620,15 @@ class OrdersApi
      * Generate a consumer token
      *
      * @param  string $authorization_token (required)
-     * @param  \Klarna\Model\CustomerTokenCreationRequest $body (optional)
+     * @param  \Klarna\Payments\Model\CustomerTokenCreationRequest $body (optional)
      *
-     * @throws \Klarna\ApiException on non-2xx response
+     * @throws \Klarna\Payments\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Klarna\Model\CustomerTokenCreationResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Klarna\Payments\Model\CustomerTokenCreationResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function purchaseTokenWithHttpInfo($authorization_token, $body = null)
     {
-        $returnType = '\Klarna\Model\CustomerTokenCreationResponse';
+        $returnType = '\Klarna\Payments\Model\CustomerTokenCreationResponse';
         $request = $this->purchaseTokenRequest($authorization_token, $body);
 
         try {
@@ -680,7 +680,7 @@ class OrdersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Klarna\Model\CustomerTokenCreationResponse',
+                        '\Klarna\Payments\Model\CustomerTokenCreationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -688,7 +688,7 @@ class OrdersApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Klarna\Model\ErrorV2',
+                        '\Klarna\Payments\Model\ErrorV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -704,7 +704,7 @@ class OrdersApi
      * Generate a consumer token
      *
      * @param  string $authorization_token (required)
-     * @param  \Klarna\Model\CustomerTokenCreationRequest $body (optional)
+     * @param  \Klarna\Payments\Model\CustomerTokenCreationRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -725,14 +725,14 @@ class OrdersApi
      * Generate a consumer token
      *
      * @param  string $authorization_token (required)
-     * @param  \Klarna\Model\CustomerTokenCreationRequest $body (optional)
+     * @param  \Klarna\Payments\Model\CustomerTokenCreationRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function purchaseTokenAsyncWithHttpInfo($authorization_token, $body = null)
     {
-        $returnType = '\Klarna\Model\CustomerTokenCreationResponse';
+        $returnType = '\Klarna\Payments\Model\CustomerTokenCreationResponse';
         $request = $this->purchaseTokenRequest($authorization_token, $body);
 
         return $this->client
@@ -776,7 +776,7 @@ class OrdersApi
      * Create request for operation 'purchaseToken'
      *
      * @param  string $authorization_token (required)
-     * @param  \Klarna\Model\CustomerTokenCreationRequest $body (optional)
+     * @param  \Klarna\Payments\Model\CustomerTokenCreationRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

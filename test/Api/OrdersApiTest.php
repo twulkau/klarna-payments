@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Klarna
+ * @package  Klarna\Payments
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace Klarna;
+namespace Klarna\Payments;
 
-use \Klarna\Configuration;
-use \Klarna\ApiException;
-use \Klarna\ObjectSerializer;
+use \Klarna\Payments\Configuration;
+use \Klarna\Payments\ApiException;
+use \Klarna\Payments\ObjectSerializer;
 
 /**
  * OrdersApiTest Class Doc Comment
  *
  * @category Class
- * @package  Klarna
+ * @package  Klarna\Payments
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */

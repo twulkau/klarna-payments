@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Klarna
+ * @package  Klarna\Payments
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Klarna\Model;
+namespace Klarna\Payments\Model;
 
 use \ArrayAccess;
-use \Klarna\ObjectSerializer;
+use \Klarna\Payments\ObjectSerializer;
 
 /**
  * PaymentMethodCategory Class Doc Comment
  *
  * @category Class
- * @package  Klarna
+ * @package  Klarna\Payments
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class PaymentMethodCategory implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'asset_urls' => '\Klarna\Model\AssetUrls',
+        'asset_urls' => '\Klarna\Payments\Model\AssetUrls',
         'identifier' => 'string',
         'name' => 'string'
     ];
@@ -219,7 +219,7 @@ class PaymentMethodCategory implements ModelInterface, ArrayAccess
     /**
      * Gets asset_urls
      *
-     * @return \Klarna\Model\AssetUrls
+     * @return \Klarna\Payments\Model\AssetUrls
      */
     public function getAssetUrls()
     {
@@ -229,7 +229,7 @@ class PaymentMethodCategory implements ModelInterface, ArrayAccess
     /**
      * Sets asset_urls
      *
-     * @param \Klarna\Model\AssetUrls $asset_urls Asset URLs for the payment method. Using this dynamic asset will make sure that any design update of Klarna will automatically be propagated.
+     * @param \Klarna\Payments\Model\AssetUrls $asset_urls Asset URLs for the payment method. Using this dynamic asset will make sure that any design update of Klarna will automatically be propagated.
      *
      * @return $this
      */

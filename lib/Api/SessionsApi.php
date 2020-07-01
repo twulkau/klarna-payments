@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Klarna
+ * @package  Klarna\Payments
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Klarna\Api;
+namespace Klarna\Payments\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Klarna\ApiException;
-use Klarna\Configuration;
-use Klarna\HeaderSelector;
-use Klarna\ObjectSerializer;
+use Klarna\Payments\ApiException;
+use Klarna\Payments\Configuration;
+use Klarna\Payments\HeaderSelector;
+use Klarna\Payments\ObjectSerializer;
 
 /**
  * SessionsApi Class Doc Comment
  *
  * @category Class
- * @package  Klarna
+ * @package  Klarna\Payments
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,11 +92,11 @@ class SessionsApi
      *
      * Create a new credit session
      *
-     * @param  \Klarna\Model\Session $body session_request (required)
+     * @param  \Klarna\Payments\Model\Session $body session_request (required)
      *
-     * @throws \Klarna\ApiException on non-2xx response
+     * @throws \Klarna\Payments\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Klarna\Model\MerchantSession
+     * @return \Klarna\Payments\Model\MerchantSession
      */
     public function createCreditSession($body)
     {
@@ -109,15 +109,15 @@ class SessionsApi
      *
      * Create a new credit session
      *
-     * @param  \Klarna\Model\Session $body session_request (required)
+     * @param  \Klarna\Payments\Model\Session $body session_request (required)
      *
-     * @throws \Klarna\ApiException on non-2xx response
+     * @throws \Klarna\Payments\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Klarna\Model\MerchantSession, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Klarna\Payments\Model\MerchantSession, HTTP status code, HTTP response headers (array of strings)
      */
     public function createCreditSessionWithHttpInfo($body)
     {
-        $returnType = '\Klarna\Model\MerchantSession';
+        $returnType = '\Klarna\Payments\Model\MerchantSession';
         $request = $this->createCreditSessionRequest($body);
 
         try {
@@ -169,7 +169,7 @@ class SessionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Klarna\Model\MerchantSession',
+                        '\Klarna\Payments\Model\MerchantSession',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -184,7 +184,7 @@ class SessionsApi
      *
      * Create a new credit session
      *
-     * @param  \Klarna\Model\Session $body session_request (required)
+     * @param  \Klarna\Payments\Model\Session $body session_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -204,14 +204,14 @@ class SessionsApi
      *
      * Create a new credit session
      *
-     * @param  \Klarna\Model\Session $body session_request (required)
+     * @param  \Klarna\Payments\Model\Session $body session_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createCreditSessionAsyncWithHttpInfo($body)
     {
-        $returnType = '\Klarna\Model\MerchantSession';
+        $returnType = '\Klarna\Payments\Model\MerchantSession';
         $request = $this->createCreditSessionRequest($body);
 
         return $this->client
@@ -254,7 +254,7 @@ class SessionsApi
     /**
      * Create request for operation 'createCreditSession'
      *
-     * @param  \Klarna\Model\Session $body session_request (required)
+     * @param  \Klarna\Payments\Model\Session $body session_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -358,9 +358,9 @@ class SessionsApi
      *
      * @param  string $session_id session_id (required)
      *
-     * @throws \Klarna\ApiException on non-2xx response
+     * @throws \Klarna\Payments\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Klarna\Model\Session
+     * @return \Klarna\Payments\Model\Session
      */
     public function readCreditSession($session_id)
     {
@@ -375,13 +375,13 @@ class SessionsApi
      *
      * @param  string $session_id session_id (required)
      *
-     * @throws \Klarna\ApiException on non-2xx response
+     * @throws \Klarna\Payments\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Klarna\Model\Session, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Klarna\Payments\Model\Session, HTTP status code, HTTP response headers (array of strings)
      */
     public function readCreditSessionWithHttpInfo($session_id)
     {
-        $returnType = '\Klarna\Model\Session';
+        $returnType = '\Klarna\Payments\Model\Session';
         $request = $this->readCreditSessionRequest($session_id);
 
         try {
@@ -433,7 +433,7 @@ class SessionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Klarna\Model\Session',
+                        '\Klarna\Payments\Model\Session',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -475,7 +475,7 @@ class SessionsApi
      */
     public function readCreditSessionAsyncWithHttpInfo($session_id)
     {
-        $returnType = '\Klarna\Model\Session';
+        $returnType = '\Klarna\Payments\Model\Session';
         $request = $this->readCreditSessionRequest($session_id);
 
         return $this->client
@@ -626,9 +626,9 @@ class SessionsApi
      * Update an existing credit session
      *
      * @param  string $session_id session_id (required)
-     * @param  \Klarna\Model\Session $body session_request (required)
+     * @param  \Klarna\Payments\Model\Session $body session_request (required)
      *
-     * @throws \Klarna\ApiException on non-2xx response
+     * @throws \Klarna\Payments\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -643,9 +643,9 @@ class SessionsApi
      * Update an existing credit session
      *
      * @param  string $session_id session_id (required)
-     * @param  \Klarna\Model\Session $body session_request (required)
+     * @param  \Klarna\Payments\Model\Session $body session_request (required)
      *
-     * @throws \Klarna\ApiException on non-2xx response
+     * @throws \Klarna\Payments\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -697,7 +697,7 @@ class SessionsApi
      * Update an existing credit session
      *
      * @param  string $session_id session_id (required)
-     * @param  \Klarna\Model\Session $body session_request (required)
+     * @param  \Klarna\Payments\Model\Session $body session_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -718,7 +718,7 @@ class SessionsApi
      * Update an existing credit session
      *
      * @param  string $session_id session_id (required)
-     * @param  \Klarna\Model\Session $body session_request (required)
+     * @param  \Klarna\Payments\Model\Session $body session_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -755,7 +755,7 @@ class SessionsApi
      * Create request for operation 'updateCreditSession'
      *
      * @param  string $session_id session_id (required)
-     * @param  \Klarna\Model\Session $body session_request (required)
+     * @param  \Klarna\Payments\Model\Session $body session_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**authorized_payment_method** | [**\Klarna\Model\AuthorizedPaymentMethod**](AuthorizedPaymentMethod.md) |  | [optional] 
+**authorized_payment_method** | [**\Klarna\Payments\Model\AuthorizedPaymentMethod**](AuthorizedPaymentMethod.md) |  | [optional] 
 **correlation_id** | **string** |  | [optional] 
 **error_code** | **string** |  | [optional] 
 **error_messages** | **string[]** |  | [optional] 

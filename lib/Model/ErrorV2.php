@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Klarna
+ * @package  Klarna\Payments
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Klarna\Model;
+namespace Klarna\Payments\Model;
 
 use \ArrayAccess;
-use \Klarna\ObjectSerializer;
+use \Klarna\Payments\ObjectSerializer;
 
 /**
  * ErrorV2 Class Doc Comment
  *
  * @category Class
- * @package  Klarna
+ * @package  Klarna\Payments
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class ErrorV2 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'authorized_payment_method' => '\Klarna\Model\AuthorizedPaymentMethod',
+        'authorized_payment_method' => '\Klarna\Payments\Model\AuthorizedPaymentMethod',
         'correlation_id' => 'string',
         'error_code' => 'string',
         'error_messages' => 'string[]',
@@ -237,7 +237,7 @@ class ErrorV2 implements ModelInterface, ArrayAccess
     /**
      * Gets authorized_payment_method
      *
-     * @return \Klarna\Model\AuthorizedPaymentMethod
+     * @return \Klarna\Payments\Model\AuthorizedPaymentMethod
      */
     public function getAuthorizedPaymentMethod()
     {
@@ -247,7 +247,7 @@ class ErrorV2 implements ModelInterface, ArrayAccess
     /**
      * Sets authorized_payment_method
      *
-     * @param \Klarna\Model\AuthorizedPaymentMethod $authorized_payment_method authorized_payment_method
+     * @param \Klarna\Payments\Model\AuthorizedPaymentMethod $authorized_payment_method authorized_payment_method
      *
      * @return $this
      */

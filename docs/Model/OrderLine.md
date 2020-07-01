@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **image_url** | **string** | URL to an image that can be later embedded in communications between Klarna and the customer. (max 1024 characters) | [optional] 
 **merchant_data** | **string** | Used for storing merchant&#39;s internal order number or other reference. Pass through field. (max 255 characters) | [optional] 
 **name** | **string** | Descriptive name of the order line item. | 
-**product_identifiers** | [**\Klarna\Model\ProductIdentifiers**](ProductIdentifiers.md) | Additional information identifying the order line item. | [optional] 
+**product_identifiers** | [**\Klarna\Payments\Model\ProductIdentifiers**](ProductIdentifiers.md) | Additional information identifying the order line item. | [optional] 
 **product_url** | **string** | URL to the product in the merchant’s webshop that can be later used in communications between Klarna and the customer. (max 1024 characters) | [optional] 
 **quantity** | **int** | Quantity of the order line item. Must be a non-negative number. | 
 **quantity_unit** | **string** | Unit used to describe the quantity, e.g. kg, pcs, etc. If defined the value has to be 1-8 characters. | [optional] 

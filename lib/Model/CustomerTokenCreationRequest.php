@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Klarna
+ * @package  Klarna\Payments
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Klarna\Model;
+namespace Klarna\Payments\Model;
 
 use \ArrayAccess;
-use \Klarna\ObjectSerializer;
+use \Klarna\Payments\ObjectSerializer;
 
 /**
  * CustomerTokenCreationRequest Class Doc Comment
  *
  * @category Class
- * @package  Klarna
+ * @package  Klarna\Payments
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,8 +57,8 @@ class CustomerTokenCreationRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'billing_address' => '\Klarna\Model\Address',
-        'customer' => '\Klarna\Model\Customer',
+        'billing_address' => '\Klarna\Payments\Model\Address',
+        'customer' => '\Klarna\Payments\Model\Customer',
         'description' => 'string',
         'intended_use' => 'string',
         'locale' => 'string',
@@ -299,7 +299,7 @@ class CustomerTokenCreationRequest implements ModelInterface, ArrayAccess
     /**
      * Gets billing_address
      *
-     * @return \Klarna\Model\Address
+     * @return \Klarna\Payments\Model\Address
      */
     public function getBillingAddress()
     {
@@ -309,7 +309,7 @@ class CustomerTokenCreationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets billing_address
      *
-     * @param \Klarna\Model\Address $billing_address Once the customer has provided any data, updates to this object will be ignored (without generating an error).
+     * @param \Klarna\Payments\Model\Address $billing_address Once the customer has provided any data, updates to this object will be ignored (without generating an error).
      *
      * @return $this
      */
@@ -323,7 +323,7 @@ class CustomerTokenCreationRequest implements ModelInterface, ArrayAccess
     /**
      * Gets customer
      *
-     * @return \Klarna\Model\Customer
+     * @return \Klarna\Payments\Model\Customer
      */
     public function getCustomer()
     {
@@ -333,7 +333,7 @@ class CustomerTokenCreationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets customer
      *
-     * @param \Klarna\Model\Customer $customer Information about the liable customer of the order.
+     * @param \Klarna\Payments\Model\Customer $customer Information about the liable customer of the order.
      *
      * @return $this
      */

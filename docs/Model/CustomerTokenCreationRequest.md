@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**billing_address** | [**\Klarna\Model\Address**](Address.md) | Once the customer has provided any data, updates to this object will be ignored (without generating an error). | [optional] 
-**customer** | [**\Klarna\Model\Customer**](Customer.md) | Information about the liable customer of the order. | [optional] 
+**billing_address** | [**\Klarna\Payments\Model\Address**](Address.md) | Once the customer has provided any data, updates to this object will be ignored (without generating an error). | [optional] 
+**customer** | [**\Klarna\Payments\Model\Customer**](Customer.md) | Information about the liable customer of the order. | [optional] 
 **description** | **string** | Description of the purpose of the token. | 
 **intended_use** | **string** | Intended use for the token. | 
 **locale** | **string** | RFC 1766 customer&#39;s locale. | 

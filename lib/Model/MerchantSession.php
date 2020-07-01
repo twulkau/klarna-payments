@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Klarna
+ * @package  Klarna\Payments
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Klarna\Model;
+namespace Klarna\Payments\Model;
 
 use \ArrayAccess;
-use \Klarna\ObjectSerializer;
+use \Klarna\Payments\ObjectSerializer;
 
 /**
  * MerchantSession Class Doc Comment
  *
  * @category Class
- * @package  Klarna
+ * @package  Klarna\Payments
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class MerchantSession implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'client_token' => 'string',
-        'payment_method_categories' => '\Klarna\Model\PaymentMethodCategory[]',
+        'payment_method_categories' => '\Klarna\Payments\Model\PaymentMethodCategory[]',
         'session_id' => 'string'
     ];
 
@@ -249,7 +249,7 @@ class MerchantSession implements ModelInterface, ArrayAccess
     /**
      * Gets payment_method_categories
      *
-     * @return \Klarna\Model\PaymentMethodCategory[]
+     * @return \Klarna\Payments\Model\PaymentMethodCategory[]
      */
     public function getPaymentMethodCategories()
     {
@@ -259,7 +259,7 @@ class MerchantSession implements ModelInterface, ArrayAccess
     /**
      * Sets payment_method_categories
      *
-     * @param \Klarna\Model\PaymentMethodCategory[] $payment_method_categories Available payment method categories for this particular session
+     * @param \Klarna\Payments\Model\PaymentMethodCategory[] $payment_method_categories Available payment method categories for this particular session
      *
      * @return $this
      */

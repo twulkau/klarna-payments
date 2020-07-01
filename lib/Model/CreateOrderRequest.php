@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Klarna
+ * @package  Klarna\Payments
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Klarna\Model;
+namespace Klarna\Payments\Model;
 
 use \ArrayAccess;
-use \Klarna\ObjectSerializer;
+use \Klarna\Payments\ObjectSerializer;
 
 /**
  * CreateOrderRequest Class Doc Comment
  *
  * @category Class
- * @package  Klarna
+ * @package  Klarna\Payments
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,28 +58,28 @@ class CreateOrderRequest implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'acquiring_channel' => 'string',
-        'attachment' => '\Klarna\Model\Attachment',
+        'attachment' => '\Klarna\Payments\Model\Attachment',
         'authorization_token' => 'string',
         'auto_capture' => 'bool',
-        'billing_address' => '\Klarna\Model\Address',
+        'billing_address' => '\Klarna\Payments\Model\Address',
         'client_token' => 'string',
         'custom_payment_method_ids' => 'string[]',
-        'customer' => '\Klarna\Model\Customer',
+        'customer' => '\Klarna\Payments\Model\Customer',
         'design' => 'string',
-        'expires_at' => '\Klarna\Model\Instant',
+        'expires_at' => '\Klarna\Payments\Model\Instant',
         'locale' => 'string',
         'merchant_data' => 'string',
         'merchant_reference1' => 'string',
         'merchant_reference2' => 'string',
-        'merchant_urls' => '\Klarna\Model\MerchantUrls',
-        'options' => '\Klarna\Model\Options',
+        'merchant_urls' => '\Klarna\Payments\Model\MerchantUrls',
+        'options' => '\Klarna\Payments\Model\Options',
         'order_amount' => 'int',
-        'order_lines' => '\Klarna\Model\OrderLine[]',
+        'order_lines' => '\Klarna\Payments\Model\OrderLine[]',
         'order_tax_amount' => 'int',
-        'payment_method_categories' => '\Klarna\Model\PaymentMethodCategory[]',
+        'payment_method_categories' => '\Klarna\Payments\Model\PaymentMethodCategory[]',
         'purchase_country' => 'string',
         'purchase_currency' => 'string',
-        'shipping_address' => '\Klarna\Model\Address',
+        'shipping_address' => '\Klarna\Payments\Model\Address',
         'status' => 'string'
     ];
 
@@ -451,7 +451,7 @@ class CreateOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Gets attachment
      *
-     * @return \Klarna\Model\Attachment
+     * @return \Klarna\Payments\Model\Attachment
      */
     public function getAttachment()
     {
@@ -461,7 +461,7 @@ class CreateOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Sets attachment
      *
-     * @param \Klarna\Model\Attachment $attachment Extra Merchant Data (additional information) required for additional risk check. The required parameters will be described in the appendix of contract agreement.
+     * @param \Klarna\Payments\Model\Attachment $attachment Extra Merchant Data (additional information) required for additional risk check. The required parameters will be described in the appendix of contract agreement.
      *
      * @return $this
      */
@@ -523,7 +523,7 @@ class CreateOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Gets billing_address
      *
-     * @return \Klarna\Model\Address
+     * @return \Klarna\Payments\Model\Address
      */
     public function getBillingAddress()
     {
@@ -533,7 +533,7 @@ class CreateOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Sets billing_address
      *
-     * @param \Klarna\Model\Address $billing_address Provide the billing address of the customer, if you have collected already. If not, then Klarna will collect the details inside the iFrame before authorization.
+     * @param \Klarna\Payments\Model\Address $billing_address Provide the billing address of the customer, if you have collected already. If not, then Klarna will collect the details inside the iFrame before authorization.
      *
      * @return $this
      */
@@ -595,7 +595,7 @@ class CreateOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Gets customer
      *
-     * @return \Klarna\Model\Customer
+     * @return \Klarna\Payments\Model\Customer
      */
     public function getCustomer()
     {
@@ -605,7 +605,7 @@ class CreateOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Sets customer
      *
-     * @param \Klarna\Model\Customer $customer Object to provide the details of the customer making the payment.
+     * @param \Klarna\Payments\Model\Customer $customer Object to provide the details of the customer making the payment.
      *
      * @return $this
      */
@@ -643,7 +643,7 @@ class CreateOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Gets expires_at
      *
-     * @return \Klarna\Model\Instant
+     * @return \Klarna\Payments\Model\Instant
      */
     public function getExpiresAt()
     {
@@ -653,7 +653,7 @@ class CreateOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Sets expires_at
      *
-     * @param \Klarna\Model\Instant $expires_at Session expiration date
+     * @param \Klarna\Payments\Model\Instant $expires_at Session expiration date
      *
      * @return $this
      */
@@ -789,7 +789,7 @@ class CreateOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Gets merchant_urls
      *
-     * @return \Klarna\Model\MerchantUrls
+     * @return \Klarna\Payments\Model\MerchantUrls
      */
     public function getMerchantUrls()
     {
@@ -799,7 +799,7 @@ class CreateOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Sets merchant_urls
      *
-     * @param \Klarna\Model\MerchantUrls $merchant_urls Used to send in the different merchant URLs that Klarna needs at different stages of the process.
+     * @param \Klarna\Payments\Model\MerchantUrls $merchant_urls Used to send in the different merchant URLs that Klarna needs at different stages of the process.
      *
      * @return $this
      */
@@ -813,7 +813,7 @@ class CreateOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Gets options
      *
-     * @return \Klarna\Model\Options
+     * @return \Klarna\Payments\Model\Options
      */
     public function getOptions()
     {
@@ -823,7 +823,7 @@ class CreateOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Sets options
      *
-     * @param \Klarna\Model\Options $options Design customization options for the Klarna Payments iframe. The design options are limited to changing colors. It is not possible to change the font or other designs at the moment.
+     * @param \Klarna\Payments\Model\Options $options Design customization options for the Klarna Payments iframe. The design options are limited to changing colors. It is not possible to change the font or other designs at the moment.
      *
      * @return $this
      */
@@ -866,7 +866,7 @@ class CreateOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Gets order_lines
      *
-     * @return \Klarna\Model\OrderLine[]
+     * @return \Klarna\Payments\Model\OrderLine[]
      */
     public function getOrderLines()
     {
@@ -876,7 +876,7 @@ class CreateOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Sets order_lines
      *
-     * @param \Klarna\Model\OrderLine[] $order_lines The array containing list of line items that are part of this order. Maximum of 1000 line items could be processed in a single order.
+     * @param \Klarna\Payments\Model\OrderLine[] $order_lines The array containing list of line items that are part of this order. Maximum of 1000 line items could be processed in a single order.
      *
      * @return $this
      */
@@ -919,7 +919,7 @@ class CreateOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Gets payment_method_categories
      *
-     * @return \Klarna\Model\PaymentMethodCategory[]
+     * @return \Klarna\Payments\Model\PaymentMethodCategory[]
      */
     public function getPaymentMethodCategories()
     {
@@ -929,7 +929,7 @@ class CreateOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Sets payment_method_categories
      *
-     * @param \Klarna\Model\PaymentMethodCategory[] $payment_method_categories Available payment method categories
+     * @param \Klarna\Payments\Model\PaymentMethodCategory[] $payment_method_categories Available payment method categories
      *
      * @return $this
      */
@@ -1001,7 +1001,7 @@ class CreateOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_address
      *
-     * @return \Klarna\Model\Address
+     * @return \Klarna\Payments\Model\Address
      */
     public function getShippingAddress()
     {
@@ -1011,7 +1011,7 @@ class CreateOrderRequest implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_address
      *
-     * @param \Klarna\Model\Address $shipping_address The shipping address of the consumer. Please note that this is not needed unless the customer has explicitly chosen to enter a separate shipping address. Otherwise the billing address will be automatically cloned.
+     * @param \Klarna\Payments\Model\Address $shipping_address The shipping address of the consumer. Please note that this is not needed unless the customer has explicitly chosen to enter a separate shipping address. Otherwise the billing address will be automatically cloned.
      *
      * @return $this
      */

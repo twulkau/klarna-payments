@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Klarna
+ * @package  Klarna\Payments
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Klarna\Model;
+namespace Klarna\Payments\Model;
 
 use \ArrayAccess;
-use \Klarna\ObjectSerializer;
+use \Klarna\Payments\ObjectSerializer;
 
 /**
  * OrderLine Class Doc Comment
  *
  * @category Class
- * @package  Klarna
+ * @package  Klarna\Payments
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class OrderLine implements ModelInterface, ArrayAccess
         'image_url' => 'string',
         'merchant_data' => 'string',
         'name' => 'string',
-        'product_identifiers' => '\Klarna\Model\ProductIdentifiers',
+        'product_identifiers' => '\Klarna\Payments\Model\ProductIdentifiers',
         'product_url' => 'string',
         'quantity' => 'int',
         'quantity_unit' => 'string',
@@ -446,7 +446,7 @@ class OrderLine implements ModelInterface, ArrayAccess
     /**
      * Gets product_identifiers
      *
-     * @return \Klarna\Model\ProductIdentifiers
+     * @return \Klarna\Payments\Model\ProductIdentifiers
      */
     public function getProductIdentifiers()
     {
@@ -456,7 +456,7 @@ class OrderLine implements ModelInterface, ArrayAccess
     /**
      * Sets product_identifiers
      *
-     * @param \Klarna\Model\ProductIdentifiers $product_identifiers Additional information identifying the order line item.
+     * @param \Klarna\Payments\Model\ProductIdentifiers $product_identifiers Additional information identifying the order line item.
      *
      * @return $this
      */
