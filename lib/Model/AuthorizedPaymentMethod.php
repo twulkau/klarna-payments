@@ -168,7 +168,16 @@ class AuthorizedPaymentMethod implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const TYPE_INVOICE__AKA_PAY_LATERFIXED_AMOUNT__AKA_FIXED_INSTALMENTSPIX__AKA_PAY_IN_X_MONTHSBASE_ACCOUNT__AKA_KLARNA_MONTHLY_INVOICEDEFERRED_INTEREST__AKA_DEFERRED_INTEREST__US_ONLYDIRECT_DEBIT__AKA_KLARNA_DIREKT_OR_DIRECT_DEBITDIRECT_BANK_TRANSFER__AKA_SOFORT_OR_DIRECT_BANK_TRANSFERB2B_INVOICE__AKA_B2_B_PAY_LATERCARD__AKA_CARDSLICE_IT_BY_CARD__AKA_SLICE_IT_BY_CARD__US__UK = 'invoice (a.k.a. pay later)  Fixed_amount (a.k.a. fixed instalments)  Pix (a.k.a. pay in x months)  Base_account (a.k.a. Klarna monthly invoice)  Deferred_interest (a.k.a. Deferred interest [US only])  Direct_debit (a.k.a. Klarna Direkt or Direct Debit)  Direct_bank_transfer (a.k.a. Sofort or Direct Bank Transfer)  B2b_invoice (a.k.a. B2B Pay Later)  Card (a.k.a. card)  Slice_it_by_card (a.k.a. Slice it by card [US & UK])';
+    const TYPE_INVOICE = 'invoice';
+    const TYPE_FIXED_AMOUNT = 'Fixed_amount';
+    const TYPE_PIX = 'Pix';
+    const TYPE_BASE_ACCOUNT = 'Base_account';
+    const TYPE_DEFERRED_INTEREST = 'Deferred_interest';
+    const TYPE_DIRECT_DEBIT = 'Direct_debit';
+    const TYPE_DIRECT_BANK_TRANSFER = 'Direct_bank_transfer';
+    const TYPE_B2B_INVOICE = 'B2b_invoice';
+    const TYPE_CARD = 'Card';
+    const TYPE_SLICE_IT_BY_CARD = 'Slice_it_by_card';
     
 
     
@@ -180,7 +189,16 @@ class AuthorizedPaymentMethod implements ModelInterface, ArrayAccess
     public function getTypeAllowableValues()
     {
         return [
-            self::TYPE_INVOICE__AKA_PAY_LATERFIXED_AMOUNT__AKA_FIXED_INSTALMENTSPIX__AKA_PAY_IN_X_MONTHSBASE_ACCOUNT__AKA_KLARNA_MONTHLY_INVOICEDEFERRED_INTEREST__AKA_DEFERRED_INTEREST__US_ONLYDIRECT_DEBIT__AKA_KLARNA_DIREKT_OR_DIRECT_DEBITDIRECT_BANK_TRANSFER__AKA_SOFORT_OR_DIRECT_BANK_TRANSFERB2B_INVOICE__AKA_B2_B_PAY_LATERCARD__AKA_CARDSLICE_IT_BY_CARD__AKA_SLICE_IT_BY_CARD__US__UK,
+            self::TYPE_INVOICE,
+            self::TYPE_FIXED_AMOUNT,
+            self::TYPE_PIX,
+            self::TYPE_BASE_ACCOUNT,
+            self::TYPE_DEFERRED_INTEREST,
+            self::TYPE_DIRECT_DEBIT,
+            self::TYPE_DIRECT_BANK_TRANSFER,
+            self::TYPE_B2B_INVOICE,
+            self::TYPE_CARD,
+            self::TYPE_SLICE_IT_BY_CARD,
         ];
     }
     
